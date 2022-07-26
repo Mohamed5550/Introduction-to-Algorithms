@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int n, k; // number, max
+    int n, k; // count, max
     cin >> n >> k;
 
     vector <int> v(n+1);
