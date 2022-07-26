@@ -1,0 +1,34 @@
+=== Heap sort ====
+There are many sorting algorithms
+- Insertion sort
+- Merge sort
+- Heap sort
+- Quick sort
+
+Heap sort:
+    - depends on heap data structure
+    - heap is a binary tree with some constraints
+    - max-heap or min-heap
+    - max-heap: every element is greater or equal to all of its children
+    - heap can be stored in an array
+    - left: 2x
+    - right 2x+1
+    - parent: x/2
+
+Maintaining a heap:
+    - It is the method to maintain the current node comparing to its children
+
+Building a heap:
+    - We run a max-heapify on each element from n/2 to 1;
+
+Heap sort:
+    - We build a heap
+    - We run from n to 1;
+    - We exchange each root with the ith element in the new range
+    - We max-heapify(1) on every itertaion to fix the heap
+
+Priority Queue:
+    - Insert(x)
+    - top()
+    - pop()
+    - 

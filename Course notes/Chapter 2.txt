@@ -1,0 +1,32 @@
+Insertion sort:
+- Loop fom 1 to the last of the array
+- for each element when you reach it, all the elements before it are guaranteed to be sorted
+- we call the current element the "key"
+- you compare the key with the elements before it, if the key is smaller, you set the value of the current element to the next element of it.
+- At last you set the value of last element you reached to the key
+
+What is loop invariant (to prove the correctness of the algorithm like mathematical induction):
+- Initialization: It is true for the first iteration of the loop
+- Maintance: If it is true before an iteration, it remains true after it.
+- Termination: When the loop ends, the code should terminate returning the correct value
+
+
+== Analyzing Algorithms == 
+- It is the calculation of the resources needed for an algorithm
+- Operations that is done in constant time: add, subtract, multiply, divide, remainder, floor, ceil, power, shifting.
+- running time of an algorithm: the number of steps executed.
+
+Order of growth:
+- we simplify the equation of the analysis by taking the most segnificant element (the first term) in the equation (an^2+bn+c: we take n^2).
+- It is pronounced theta of n-squared
+
+
+== Desiging and algorithm ==
+The divide-and-conquer approach:
+- divide
+- conquer
+- combine
+
+The merging procedure:
+- it is to merge two sorted arrays into one sorted array
+- it runs in O(n)

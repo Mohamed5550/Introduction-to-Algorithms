@@ -1,0 +1,17 @@
+Probabilistic analysis and randomized algorithms
+
+1. The hrigin problem:
+    - We have a person to interview each day for Cn, and if it is the best so far we hire him for Cm
+    - The worst case if when they come in increasing order
+    - When we have a distribution of the input we can make probabilistic analysis to design an efficient algorithm
+    - All of the n! permuations of the applicans have the same probability (uniform random permuation)
+    - We can make a fully random permuation instead of relying on the input order
+
+2. Indicator random variables:
+    - It is used to simplify the equations of expectations
+
+3. Randomized algorithms:
+    - randomly permuted arrays: setting prioritys and sort according to them O(nlogn)
+    - Randomize-in-place in O(n)
+    
+    

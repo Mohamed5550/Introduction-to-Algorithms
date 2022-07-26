@@ -1,0 +1,65 @@
+Counting theory tries to tell us how many without actually counting every choice
+
+Rule of sum (one of a or one of b = a+b)
+Rule of product (onf of a and one of b = a*b)
+
+Strings:
+    - substring: is a connected sequence of a string
+    - k-string: is a substring of length k
+    - nubmer of ways to combiine a k-substring is s^k(where s is the number of different characters that can be used to form the substring)
+
+Permuations:
+    - a permuation is a string which every element appears only once
+    - A k-permuation is a permuation of a length k from a string s
+    - to form a k-permuation from string of length S: n*(n-1)*(n-2)...(n-k+1) = n!/(n-k)! = nPk
+
+Combinations:
+    - A combination is a subset of the string s
+    - A k-combination is a combination of a lengt k from a string s
+    - every combination of size k has a k! permuations, so we can epxress combinations in terms of permuations: n!/(n-k)!(k)! = nCk
+
+Binomial coefficients:
+    - The notation n choose k
+    - The formula is symmetric in k and n-k
+    - Special case of binomial expansion where x=y=1: 2^n = summation of nCk from 0 to n
+
+Binomial bound:
+    - 
+
+
+=======
+Propability
+=======
+
+The sample space: is all the possible cases in our system
+The elementray event: is the output of each experiment
+Event: is a subset of the sample spac: {HT, TH} is the event of getting one head with one tail
+null event
+A and B are mutually exclusive when: A ∩ B
+
+
+Axioms of probability:
+- Probability distribution (Pr): is a mapping from the events of S to real numbers with:
+    = Pr {A} >= 0 for any A
+    = Pr {S} = 1
+    = Pr {A ∪ B} = Pr{A} + Pr{B}
+- Complement of A: S - A
+
+Discrete probability distributions:
+- is a probability distribution which every event is considered 1/n where n is the count of all events
+
+
+Continuous probability distribution:
+- every subset has the probability (c-b)/(d-a) where ad is all of the range and cb is the subset
+
+
+Conditionally probability and independence:
+- Pr{A | B}: reads probability of A given B
+- Pr{A | B} = Pr{A ∩ B} / Pr{B}
+- Pairwise independent when Pr{A ∩ B} = pr{A} Pr{B}
+- Mutually independent is the same for more thant 2 events
+
+Bayes's theorem:
+- Pr{A | b} = Pr{A} Pr{B | A} / Pr{b}
+
+

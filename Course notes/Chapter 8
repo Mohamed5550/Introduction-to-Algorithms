@@ -1,0 +1,5 @@
+===== Sorting in linear time =====
+
+- Comparison sorts: sorts that sort elements based only on the comparison between input data
+- Dicision tree
+- Any comparsion sort requires Omega(nlgn) comparisions in the worst case

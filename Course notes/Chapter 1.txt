@@ -1,0 +1,11 @@
+What is an Algorithm?
+- It is a wel-defined computational model for solving a specified problem (To convert the input into the right output).
+
+NP-complete problems:
+- Problems that no one knows if it has aan efficient algorithm or no.
+- If you find a solution for one, you can find a solution for the others.
+
+Parallelism:
+- It is to use multiple core to increase the number of processes made in the second.
+
+The importance on having knowledge base of algorithms
