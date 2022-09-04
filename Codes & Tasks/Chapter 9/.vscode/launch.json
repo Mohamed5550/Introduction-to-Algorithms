@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": false,
+      "cwd": "/media/mohamed2209/01D73CA396376EB0/Mohamed/learnings/Computer Engineering/Introduction to Algorithms/Codes & Tasks/Chapter 9",
+      "environment": [],
+      "program": "/media/mohamed2209/01D73CA396376EB0/Mohamed/learnings/Computer Engineering/Introduction to Algorithms/Codes & Tasks/Chapter 9/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
