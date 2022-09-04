@@ -3,25 +3,29 @@ using namespace std;
 const int MX = 1e6;
 
 struct stack {
-    int size = 0;
+    int n = 0;
     int arr[MX];
 
     void push(int a) {
-        arr[size++] = a;
+        arr[n++] = a;
     }
 
     void pop() {
-        if(size == 0) {
+        if(n == 0) {
             cout << "Stack is empty";
             return;
         }
 
-        size --;
+        n --;
     }
 
 
     int top() {
-        return arr[size-1];
+        return arr[n-1];
+    }
+
+    int size() {
+        return n;
     }
 };
 
@@ -36,4 +40,5 @@ int main() {
     cout << s.top() << " ";
     s.push(4);
     cout << s.top() << " ";
+    cout << s.size() << " ";
 }
