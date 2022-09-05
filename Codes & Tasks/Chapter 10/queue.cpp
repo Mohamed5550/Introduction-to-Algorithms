@@ -30,6 +30,12 @@ struct queue {
     int front() {
         return arr[head];
     }
+
+    void traverse() {
+        for(int i = head; i < head+n; i ++) {
+            cout << arr[i] << " ";
+        }
+    }
 };
 
 int main() {
@@ -42,4 +48,5 @@ int main() {
     q.pop();
     q.push(5);
     cout << q.front() << " ";
+    q.traverse();
 }
