@@ -32,7 +32,7 @@ struct queue {
     }
 
     void traverse() {
-        for(int i = head; i < head+n; i ++) {
+        for(int i = head; i < head+n; i = (i+1)%MX) {
             cout << arr[i] << " ";
         }
     }
