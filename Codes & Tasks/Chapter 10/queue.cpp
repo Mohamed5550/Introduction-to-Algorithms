@@ -31,12 +31,16 @@ struct queue {
         return arr[head];
     }
 
-    void traverse() {
+    void traverse(void (*fn)(int)) {
         for(int i = head; i < head+n; i = (i+1)%MX) {
-            cout << arr[i] << " ";
+            fn(arr[i]);
         }
     }
 };
+
+void prnt(int a) {
+    cout << a << " ";
+}
 
 int main() {
     queue q;
@@ -48,5 +52,5 @@ int main() {
     q.pop();
     q.push(5);
     cout << q.front() << " ";
-    q.traverse();
+    q.traverse(prnt);
 }
