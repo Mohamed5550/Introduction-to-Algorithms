@@ -36,6 +36,8 @@ struct LinkedList {
         
         if(thisNode->prev)
             thisNode->prev->next = thisNode->next;
+
+        delete thisNode;
     }
 
     Node *find(int x) {
