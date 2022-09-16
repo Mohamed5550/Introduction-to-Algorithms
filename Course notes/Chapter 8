@@ -3,3 +3,11 @@
 - Comparison sorts: sorts that sort elements based only on the comparison between input data
 - Dicision tree
 - Any comparsion sort requires Omega(nlgn) comparisions in the worst case
+
+== Counting sort ==
+- Storing the count of every number in an array
+- do prefix sum on the counting array
+- put each number in its correct place, then deacrease its count by one
+
+== Radix sort ==
+

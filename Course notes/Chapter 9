@@ -1,0 +1,15 @@
+===== Medians and other statistics =====
+- the ith order statistics is the ith smallest element
+- smallest element is the 1th element
+- largest element is the nth element
+- median is the (n+1)/2th element (there is lower and upper for even n)
+
+==== Quick select (select the kth smaller element in linear expected time)
+- divide the segment into two parts
+- get the pivot using quick_sort partition function
+- if it is equal to (i) return it
+- it i is smaller than the pivor, then recurse in the left segment of the pivot
+- else, then recurse in the right segment of the pivot
+
+==== Linear select (Select the kth smaller element in worsc case linear time)
+- 

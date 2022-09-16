@@ -1,0 +1,15 @@
+===== Elementart Graph Algorithms =====
+
+Representing a graph:
+- adjacency list
+- adjacency matrix
+
+==== Breadth first search ====
+- the regular BFS approach
+- shortest paths
+
+=== Depth first search ===
+- discovers every path of the graph until there is no vertices in this graph, then goes to the next path
+- no vertix is discovered twice
+
+
