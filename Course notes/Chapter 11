@@ -1,0 +1,14 @@
+===== Hash Tables =====
+
+
+- Direct-address tables:
+    = the normal arrays
+    = you have to reserve n bytes to store n only
+
+- Hash Tables:
+    = Collision: when to keys hashes to the same slot
+    = Collision resolving by chaining:
+        = simple uniform hasing: the assumption of hashing all elements eually to any of the m slots of the table
+    = Hash function
+        = The division method: avoid using 2^p or 2^p-1
+        = The multiplication method

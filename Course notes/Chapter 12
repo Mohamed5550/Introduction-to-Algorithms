@@ -1,0 +1,27 @@
+===== Binary Search Trees =====
+
+
+- Binary Search Tree Property
+    = Every element in the left of x is <= x and every element in the right of x is >= x
+
+- iorder tree walk:
+    = A simple recursive algorithm to print the binary search tree in a sorted order
+
+- querying a binary search tree:
+    = comparing with left and right child until you get your element
+    = you can get the minimum be always getting the left
+    = you can get the maximum by always getting the right
+
+- inserting into a binary search tree 
+    = we start from the root
+    = we go right or left based on the comparison until we find null
+    = we set the new node as the right or the left child based on the final comparision with last item
+    = we set the last item as parent of the new node
+
+- deleting from a binary search tree
+    = case 1: if the left node is null
+        == we replace the right node with the parent
+    = case 2: if the right node is null
+        == we replace the left node
+    = case 3: if both are not null
+        == get the successor(y) of the node(z) and replace z by y 
