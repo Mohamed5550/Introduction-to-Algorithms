@@ -25,4 +25,11 @@
 - Optimal substructure property:
   - It means that the final solution of the problem consists of the optimal solution of some subproblems, it works for both DP and Greedy
 
-`
+## Hufman codes
+
+- It is a method for optmizing data files
+- it depends on storing the frequency of each character
+- Codewors (fixed and variable)
+- Prefix codes: it can achieve the optimal data compression among any character code
+- Cost of the huffman tree = $\sum_{c \in C} c.freq * depth(c)$
+- Huffman Algorithm

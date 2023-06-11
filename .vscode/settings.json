@@ -1,6 +1,9 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.html": "html",
         "iostream": "cpp",
-        "rod cut (top down) extended": "cpp"
+        "rod cut (top down) extended": "cpp",
+        "iosfwd": "cpp"
     }
 }
