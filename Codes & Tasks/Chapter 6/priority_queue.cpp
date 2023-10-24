@@ -30,7 +30,7 @@ void heapify(vector <int> &pq, int i) {
     }
 }
 
-void increaseKey(vector <int> &pq, int i, int a) {
+void increaseKey(vector <int> &pq, int i) {
     while(i > 1 && pq[i] > pq[parent(i)]) {
         swap(pq[i], pq[parent(i)]);
         i = parent(i);
@@ -39,7 +39,7 @@ void increaseKey(vector <int> &pq, int i, int a) {
 
 void push(vector <int> &pq, int a) {
     pq.push_back(a);
-    increaseKey(pq, pq.size() - 1, a);
+    increaseKey(pq, pq.size() - 1);
 }
 
 void pop(vector <int> &pq) {
