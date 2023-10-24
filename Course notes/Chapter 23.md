@@ -9,11 +9,13 @@
 
 - The general method is to keep adding safe edges until the subset is a minimmum spanning tree
 - A is the growing minimmum spanning tree
+- We keep adding edges to A if the edge is safe
 - A cut is a partition of E
 - A cut respects A when there is no edges crosses the cut
 - a light-edge is the minium edge crossing the cut
 
 ## The algorithms of Kurskal and Prim
 
-- Kruskal algorithm sorts the graph by edges weights, then it union them if they are ins different unions one by one in order
+- Kruskal algorithm sorts the graph by edges weights, then it union them if they are in different unions one by one in order
 - It depens directly on Corrollary 23.2
+- Prim sorts the 
