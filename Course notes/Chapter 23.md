@@ -18,4 +18,4 @@
 
 - Kruskal algorithm sorts the graph by edges weights, then it union them if they are in different unions one by one in order
 - It depens directly on Corrollary 23.2
-- Prim sorts the 
+- Prim starts with any vertix and consider it as a subgraph A of the cut, then choose the light edge and add it, and repeats this operation until all the vertices are added to A
