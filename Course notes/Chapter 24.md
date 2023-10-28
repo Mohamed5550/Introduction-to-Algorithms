@@ -43,3 +43,15 @@ let $δ(u, v)$ be the shortest path from u to v
 - **Convergence property:**
 
     If $s \ to \ u \rarr v$ is a shortest path in $G$, then when $u.d = δ(s, u)$ before the relaxation of $(u, v)$, then $v.d = δ(s, v)$ this relaxation
+
+## Bellman-Form algorithm
+
+- It relaxes all the edges $v$ times, this ensures that some order of them will be the shortest path by the `convergence property`
+
+## Single source shortes path in DAG
+
+- sort them topologically then they will imply the `convergence property`
+
+## Dijkstra
+
+- 
