@@ -25,7 +25,7 @@ void relax(int u, int v, int w)
     }
 }
 
-void bellmanFord(int s)
+bool bellmanFord(int s)
 {
     distances.assign(v+1, {0, INT_MAX});
     distances[s].d = 0;
@@ -37,6 +37,17 @@ void bellmanFord(int s)
             }
         } 
     }
+
+    // check for negative cycles
+    for(int i = 1; i <= v; i ++) {
+        for(auto j: g[i]) {
+            if(distances[j.other].d > distances[i].d + j.weight) {
+                return false;
+            }
+        }
+    }
+
+    return true; 
 }
 
 void printPath(int s, int d)
@@ -56,9 +67,12 @@ int main()
         g[a].push_back({b, w});
     }
 
-    int s = 1; // source
+    int s = 6; // source
     int d = 3; // destination 
-    bellmanFord(s);
+    if(!bellmanFord(s)) {
+        cout << "Negative cycle" << "\n";
+        return 0;
+    }
     cout << "distances: ";
     for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
     cout << "\n";
