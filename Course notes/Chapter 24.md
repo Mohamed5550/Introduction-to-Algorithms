@@ -54,4 +54,5 @@ let $δ(u, v)$ be the shortest path from u to v
 
 ## Dijkstra
 
-- 
+- Dijkstra finds the shortest path in O(nlgn) worst case
+- It depends on the path-relaxation property to relax them in the right order to guarantee that each vertix has the shortest path when we remove it from the other set

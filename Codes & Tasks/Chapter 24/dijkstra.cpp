@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <limits.h>
 
 using namespace std;
 
@@ -25,18 +28,26 @@ void relax(int u, int v, int w)
     }
 }
 
-void bellmanFord(int s)
+void dijkstra(int s)
 {
     distances.assign(v+1, {0, INT_MAX});
     distances[s].d = 0;
+    priority_queue<pair<int, int>> pq; // -distance, vertix
 
     for(int i = 1; i <= v; i ++) {
-        for(int j = 1; j <= v; j ++) {
-            for(auto k: g[j]) {
-                relax(j, k.other, k.weight);
-            }
-        } 
+        pq.push({-distances[i].d, i});
     }
+
+    for(int i = 1; i <= v; i ++) {
+        pair<int, int> x = pq.top();
+        pq.pop();
+
+        for(auto j: g[x.second]) {
+            relax(x.second, j.other, j.weight);
+        }
+    }
+
+
 }
 
 void printPath(int s, int d)
@@ -58,7 +69,7 @@ int main()
 
     int s = 1; // source
     int d = 3; // destination 
-    bellmanFord(s);
+    dijkstra(s);
     cout << "distances: ";
     for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
     cout << "\n";
