@@ -44,6 +44,7 @@ void dijkstra(int s)
 
         for(auto j: g[x.second]) {
             relax(x.second, j.other, j.weight);
+            pq.push({-distances[i].d, j.other});
         }
     }
 
