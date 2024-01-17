@@ -61,3 +61,7 @@
 ## Edmonds-Karp algorithm
 
 - When we choose the augmentation path to be the shortes path in the residual network, the bounds become $O(VE^2)$
+
+## Bipartite Matching
+
+- We can add a source and a sink like we did in the multi-source multi-sink problem to solve the max-bipartite matching as a max-flow problem
