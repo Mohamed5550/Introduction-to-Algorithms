@@ -18,6 +18,7 @@ bool bfs()
     queue<int> q; // vertix
     distances.assign(v+1, oo);
     parents.assign(v+1, 0);
+    distances[s] = 0;
     q.push(s);
     while(q.size()) {
         int x = q.front(); q.pop();
