@@ -41,5 +41,3 @@ With Fast Forier transform we will multiply them in $(Olgn)$
 $$A(x) = Aeven(x^2) + Aodd(x^2)$$
 
 ## FFT Circuits
-
-- 
