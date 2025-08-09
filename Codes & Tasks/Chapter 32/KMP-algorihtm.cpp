@@ -8,7 +8,6 @@ vector<int> computeTransitionFunction(string p)
     int m = p.size();
     vector <int> trans(m);
 
-    trans[1] = 0;
     int k = 0;
     for(int i = 1; i < m; i ++) {
         while(k > 0 && p[k] != p[i]) {
