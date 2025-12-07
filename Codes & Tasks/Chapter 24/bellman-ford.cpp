@@ -2,6 +2,10 @@
 
 using namespace std;
 
+void fast() {
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+}
+
 struct edge {
     int other;
     int weight;
@@ -59,6 +63,10 @@ void printPath(int s, int d)
 
 int main()
 {
+    fast();
+ 
+    freopen("input.txt", "r", stdin);
+
     cin >> v >> e;
     g.assign(v+1, vector<edge>());
 
@@ -67,16 +75,17 @@ int main()
         g[a].push_back({b, w});
     }
 
-    int s = 6; // source
+    int s = 5; // source
     int d = 3; // destination 
     if(!bellmanFord(s)) {
         cout << "Negative cycle" << "\n";
         return 0;
     }
-    cout << "distances: ";
-    for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
-    cout << "\n";
-    printPath(s, 5);
+    // cout << "distances: ";
+    // for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
+    // cout << "\n";
+    cout << "Shortest path from " << s << " to " << d << " has weight: " << distances[d].d << "\n";
+    printPath(s, d);
 }
 
 /*

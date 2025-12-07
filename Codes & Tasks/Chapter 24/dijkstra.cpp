@@ -1,9 +1,13 @@
 #include <iostream>
 #include <vector>
-#include <queue>
 #include <limits.h>
+#include "priority_queue.h"
 
 using namespace std;
+
+void fast() {
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+}
 
 struct edge {
     int other;
@@ -20,9 +24,9 @@ vector <vector<edge>> g;
 vector <vertix> distances;
 
 
-void relax(int u, int v, int w)
+void relax(int u, int v, long long w)
 {
-    if(distances[v].d > distances[u].d + w) {
+    if(distances[v].d - w > distances[u].d) {
         distances[v].d = distances[u].d + w;
         distances[v].p = u;
     }
@@ -30,21 +34,26 @@ void relax(int u, int v, int w)
 
 void dijkstra(int s)
 {
-    distances.assign(v+1, {0, INT_MAX});
+    distances.assign(v+1, {0, LLONG_MAX});
     distances[s].d = 0;
-    priority_queue<pair<int, int>> pq; // -distance, vertix
+    vector <pair<long long, int>>  pq(1); // -distance, vertex
+    pq_index.assign(v+1, -1);
 
     for(int i = 1; i <= v; i ++) {
-        pq.push({-distances[i].d, i});
+        push(pq, {-distances[i].d, i});
     }
 
     for(int i = 1; i <= v; i ++) {
-        pair<int, int> x = pq.top();
-        pq.pop();
+        pair<long long, int> x = top(pq);
+        pop(pq);
 
         for(auto j: g[x.second]) {
+            long long oldDist = distances[j.other].d;
             relax(x.second, j.other, j.weight);
-            pq.push({-distances[i].d, j.other});
+            if(distances[j.other].d < oldDist) {
+                pq[pq_index[j.other]] = {-distances[j.other].d, j.other};
+                increaseKey(pq, pq_index[j.other]);
+            }
         }
     }
 
@@ -60,6 +69,11 @@ void printPath(int s, int d)
 
 int main()
 {
+    fast();
+ 
+    freopen("input.txt", "r", stdin);
+    // freopen("out.txt", "w", stdout);
+
     cin >> v >> e;
     g.assign(v+1, vector<edge>());
 
@@ -68,13 +82,15 @@ int main()
         g[a].push_back({b, w});
     }
 
-    int s = 1; // source
+    int s = 5; // source
     int d = 3; // destination 
     dijkstra(s);
-    cout << "distances: ";
-    for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
-    cout << "\n";
-    printPath(s, 5);
+    // cout << "distances: ";
+    // for(int i = 1; i <= v; i ++) cout << distances[i].d << " ";
+    // cout << "\n";
+    cout << "Shortest path from " << s << " to " << d << " has weight: " << distances[d].d << "\n";
+    printPath(s, d);
+    return 0;
 }
 
 /*
